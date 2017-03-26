@@ -218,8 +218,8 @@ conn.close()
 def get_twitter_users(input_string):
 	text = input_string
 	screennames_ = []
-	find = set(re.findall('^@/', input_string))
-	print (find)
+	find = set(re.findall('@([A-Za-z0-9_]+)', input_string))
+	#print (find)
 	return (find)
 # Note that the syntax for mentions in a tweet is that the username is preceded by an "@" character, e.g. "@umsi" or "@aadl", and cannot contain any punctuation besides underscores -- that's how to determine what user names are mentioned. (e.g. @hello? is just the username "hello", but @programmer_at_umsi is "programmer_at_umsi"). 
 
